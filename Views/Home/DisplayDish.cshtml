@@ -1,0 +1,24 @@
+@using CRUDelicious.Models
+@model Dish
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>@Model.Name</title>
+        <link rel="stylesheet" href="~/css/displayDish.css">
+    </head>
+    <body>
+        <partial name="homeRoutePartial"/>
+        <h1>@Model.Name</h1>
+        <h4>@Model.Chef</h4>
+        <span></span>
+        <p>@Model.Description</p>
+        <p>Calories: <span>@Model.Calories</span></p>
+        <p>Tastiness: <span>@Model.Tastiness</span></p>
+        <a href="edit/@Model.DishId">Edit</a>
+        <a href="delete/@Model.DishId">Delete</a>
+    </body>
+</html>

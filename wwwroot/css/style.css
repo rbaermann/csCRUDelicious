@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+.recentDishes {
+    display: inline-block;
+}
+
+.border {
+    height: 3px;
+    width: 360px;
+    background-color: black;
+    margin: 15px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.add {
+    position: absolute;
+    right: 250px;
+}

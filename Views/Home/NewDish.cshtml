@@ -1,0 +1,48 @@
+@using CRUDelicious.Models
+@model Dish
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>New Dish</title>
+        <link rel="stylesheet" href="~/css/newDish.css">
+    </head>
+    <body>
+        <h1>Add a new Dish!</h1>
+        <partial name="homeRoutePartial"/>
+        <form asp-action="AddingNewDish" asp-controller="Home" method="POST">
+
+            <span asp-validation-for="Chef"></span>
+            <label asp-for="Chef">Chef's Name</label>
+            <input asp-for="Chef">
+
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Name of Dish</label>
+            <input asp-for="Name">
+
+            <span asp-validation-for="Calories"></span>
+            <label asp-for="Calories">Calories</label>
+            <input asp-for="Calories">
+
+            <span asp-validation-for="Tastiness"></span>
+            <label asp-for="Tastiness">Tastiness</label>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <span asp-validation-for="Description"></span>
+            <label asp-for="Description">Description</label>
+            <textarea asp-for="Description"></textarea>
+
+            <input type="submit" value="Add Dish">
+
+        </form>
+    </body>
+</html>
